@@ -1,0 +1,236 @@
+/*
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+
+body {
+  margin: 0;
+  font-family: "Josefin Sans";
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.info-container {
+  height: 85%;
+  width: 60%;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding: 5% 10% 0px 10%; */
+  /* margin: 5% 10% 0 10%; */
+}
+.image-container {
+  height: 100%;
+  width: 40%;
+  background-image: url("../images/hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-container {
+  margin-top: 10%;
+
+  width: 70%;
+  padding: 0% 10%;
+}
+.logo {
+  position: relative;
+  top: 0;
+  margin-bottom: 15%;
+}
+.title {
+  padding: 0;
+  margin: 0;
+  font-size: 70px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.primary {
+  color: hsl(0, 36%, 70%);
+}
+.secondary {
+  font-weight: 400;
+}
+.text-content {
+  width: 80%;
+  font-size: 16px;
+  color: hsl(0, 36%, 70%);
+}
+
+.input-container {
+  margin-top: 1em;
+  width: 80%;
+  height: 100%;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+}
+.email-input {
+  height: 2.5em;
+  width: 100%;
+  border-radius: 30px;
+  padding: 0.5em 1.5em;
+  border: 1px solid hsl(0, 36%, 80%);
+}
+input::placeholder {
+  color: hsl(0, 36%, 85%);
+}
+.email-btn-container {
+  position: relative;
+  right: 15px;
+  top: -36px;
+  cursor: pointer;
+}
+.email-btn {
+  position: relative;
+  height: 2.5em;
+  width: 4em;
+  padding: 0;
+  border-radius: 30px;
+  font-size: larger;
+  border: none;
+  color: white;
+  background: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  font-weight: 300;
+  box-shadow: 0 15px 25px 1px hsl(0, 74%, 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 5px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.email-error{
+  display: none;
+  color: hsl(0, 93%, 68%);
+}
+
+@media (min-width: 1440px) {
+  .email-btn {
+    top: 74%;
+    right: 54%;
+  }
+  .email-btn-container {
+    right: 0;
+    top: -100px;
+  }
+}
+@media (min-width: 1024px) {
+  .email-btn-container {
+    right: 20px;
+    top: -36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .email-btn {
+    top: 66.4%;
+    right: 50%;
+  }
+  .email-btn-container {
+    right: 0;
+    top: -32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .main {
+    flex-direction: column;
+  }
+  .info-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding: 5% 10% 0px 10%; */
+    /* margin: 5% 10% 0 10%; */
+  }
+  .image-container {
+    height: 30%;
+    width: 100%;
+    background-image: url("../images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    margin-top: 15%;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    margin: 5%;
+    width: 100px;
+  }
+  .title-container {
+    margin-top: 300px;
+    height: 50%;
+  }
+  .title {
+    font-size: 40px;
+    text-align: center;
+  }
+  .text-content {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+  .input-container {
+    margin-top: 1em;
+    width: 100%;
+    height: 0;
+    font-weight: 700;
+    /* display: flex;
+    flex-direction: row; */
+  }
+  .email-btn-container {
+    position: relative;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: blue;
+  }
+
+  .email-btn {
+      position: relative;
+      top: 0;
+      right: 40px;
+    /* position: relative; */
+    /* height: 2.5em;
+    width: 4em;
+    padding: 0; */
+    border-radius: 30px;
+    font-size: larger;
+    border: none;
+    color: white;
+    background: linear-gradient(hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    font-weight: 300;
+    box-shadow: 0 15px 25px 1px hsl(0, 74%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .email-error{
+    margin-top: 20%;
+    font-size: 10px;
+  }
+}
